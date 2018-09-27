@@ -2,7 +2,7 @@ import random
 #no same numbers - 11
 
 class LineUp:
-    def __init__(self, quantities=[3, 11], lowerBound=11, upperBound=85):
+    def __init__(self, quantities=[3, 11], lowerBound=random.randint(1,99), upperBound=random.randint(2,100)):
         self.candidates = []
         self.quantities = quantities
         self.lowerBound = lowerBound
@@ -28,7 +28,7 @@ print("\n\n\nPlease enter your first name and the first letter of your last name
 test = LineUp()
 input("".join(["\"When Do You Stop?\"\n",
 "You must hire a new assistant. The candidates are interviewed in a random order (i.e. the best person could be first, second... last).\n",
-"After each interview the candidate is given a score. You can then choose to hire them or move on to the next candidate.\n",
+'After each interview the candidate is given a score. You can then choose to hire them (by responding "yes" when prompted) or move on to the next candidate (by responding "no" when prompted).\n',
 "You can not return to a previous candidate. If you do not hire anyone you automatically hire the last person.\n",
 "The first game involves 3 candidates, the second game involves 11 candidates.\n",
 "Good luck!\n\nPress enter to begin.\n"]))
